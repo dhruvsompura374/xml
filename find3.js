@@ -78,12 +78,12 @@ const sax = require('sax');
 
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/data', (req, res) => {
   res.send('Hello World!')
 })
 
 // Endpoint to handle the request
-app.get('/data', async (req, res) => {
+app.get('/', async (req, res) => {
     const outputDir = 'output';
     const targetNumber = req.query.number;
 
